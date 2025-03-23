@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter the Secret Code</h1>
+        <form id="secretForm">
+            <div class="form-group">
+                <label for="secretInput">Secret Code:</label>
+                <input type="text" id="secretInput" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('secretForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const correctAnswer = '123';
+            const userAnswer = document.getElementById('secretInput').value;
+            if (userAnswer === correctAnswer) {
+                window.location.href = 'success.html';
+            } else {
+                alert('Incorrect answer. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
