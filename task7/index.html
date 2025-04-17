@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refined To-Do App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center py-6">
+    <div class="w-full max-w-xl bg-white shadow-md rounded-lg p-6">
+        <h1 class="text-2xl font-bold text-center mb-4">To-Do App</h1>
+
+        <!-- Task Input Section -->
+        <div class="flex items-center mb-4">
+            <input type="text" id="taskInput" class="flex-1 border border-gray-300 p-2 rounded-lg" placeholder="Enter a task">
+            <button id="addTaskButton" class="ml-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Add Task</button>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="flex justify-between items-center mb-4">
+            <div class="flex space-x-2">
+                <button id="filterAll" class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-lg">All</button>
+                <button id="filterCompleted" class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-lg">Completed</button>
+                <button id="filterPending" class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-lg">Pending</button>
+            </div>
+            <button id="clearCompletedButton" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">Clear Completed</button>
+        </div>
+
+        <!-- Task List Section -->
+        <ul id="taskList" class="space-y-2"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
